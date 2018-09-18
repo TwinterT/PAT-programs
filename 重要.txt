@@ -1,0 +1,45 @@
+A1010   难！！！！！！！
+A1022  注意函数的引用，小心超时  读完数字以后读字符串记得用getchar()吧回车或者空格读去
+A1033  贪心实例
+A1049  数一
+A1060  转化为科学记数法
+A1064  用排序树的中序遍赋值  完全二叉树想到数组建树left=root*2,right=root*2+1
+A1065  巧用溢出
+A1067  学会变通，数组下标的巧妙利用  在初始化时确定需要交换次数（注意排除0）利用剩余交换次数控制循环的进行
+A1073  细心分析
+A1078  HASH表的二次探测结尾以表长结束 二次探测  (num+step^2)%size   step=1,2,3,...size-1;
+A1082  
+A1089  归并排序和插入排序
+A1098  堆排序 downadjust时记得设置边界
+A1103  	DSF的应用！！！！！背包问题
+A1108   sscanf(temp.c_str(),"%lf",&number);   sscanf的妙用
+A1109   如何实现交叉输入。。。。从左到右1，3，5，7从右到左8，6，4，2
+A1110   判断完全二叉树的方法，在遇到NULL时是否已经输出完所有节点，遍历条件不是为队列非空，
+A1112	char也可以用数组来map  范围[0,128]   判断连续相同的数目可以用两个指向来判断
+A1114   家庭成员可以用图来实现 将与该成员相关的部分图存放在每个成员的结构体中 用DFS遍历
+
+A1119   利用先序和后序建立二叉树并判断二叉树是否唯一
+A1129   运算符重载，set必须重新插入才会排序
+A1130   给中缀表达式加括号根据高度来看    获得每个节点数高度的递归  获得树高的方法
+A1133   排序需要多种情况时 设置int tag表示不同的状态来排序  sort是不稳定的，用stable_sort即可
+A1139   map<int,map<int,bool> > mp; 二维数组
+备注：
+
+	STL中的heap并不是container，默认是最大堆，如果需要最小堆，则需要添加参数greater<type>() 
+	常用堆操作：make_heap(), pop_heap(), push_heap(), sort_heap(), 头文件<algorithm> 
+	1.make_heap(v.begin(), v.end())使序列变成堆 
+	2.push_heap(v.begin(),v.end())假设[first, last-1)有序，新添加元素进堆，需要配合push_back() 
+	3.pop_heap(v.begin(),v.end()) 并不是真正的弹出元素，而是将first、last调换位置，将[first, last-1)做成，需要配合pop_back() 
+	4.sort_heap() 对container进行堆排序。
+
+	nth_element(num,num+n/2,num+n); 将num 数组分为[0,n/2)和[n/2,n)两部分，左边的数都小于右边 在algorithm头文件下
+
+	%*c的作用是读入\n,否则后面读入的将一直是\n   %[0-9]表示只读入'0'到'9'之间的字符，
+	%[a-zA-Z]表示只读入字母		"%[^=]" 读入任意多的字符,直到遇到"="停止
+	"%n[^=]" 读入"="号前的至多n 个字符
+
+	数组的比较最好用vector实现，比较方便
+
+     头文件string下：   stoi()  string to int string转int整数  例：int ans=stoi(str);//str为string.
+			to_string()  将int转为string   例：string str=to_string(123);
+     头文件stdlib.h下   atoi()  array to int  char[]转int整数  例：int ans=atoi(str);//str为char[],当str为string,用str.c_str()
